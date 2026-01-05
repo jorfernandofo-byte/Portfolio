@@ -600,19 +600,7 @@ max-width: 400px;
     margin: 0;
     max-width: 70%;
 }
-@media (max-width: 768px) {
-    .cert-item {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        text-align: center;
-    }
 
-    .cert-item p {
-        max-width: 100%;
-        font-size: 1.6rem;
-    }
-}
 #certificaciones {
     margin-bottom: 15rem;
 }
@@ -634,4 +622,178 @@ max-width: 400px;
     margin-top: 1rem;
 }
 
+/* ===== TITULOS ANIMADOS ===== */
+.Apellido-titles {
+    position: relative;
+    display: inline-block;
+    animation: titleReveal 6s infinite;
+}
 
+/* Aparición completa */
+@keyframes titleReveal {
+    0% {
+        opacity: 0;
+        letter-spacing: 20px;
+    }
+
+    20% {
+        opacity: 1;
+        letter-spacing: 2px;
+    }
+
+    60% {
+        opacity: 1;
+        letter-spacing: 2px;
+    }
+
+    100% {
+        opacity: 0.85;
+    }
+}
+
+/* CAPA GLITCH */
+.Apellido-titles::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    color: #ffb347;
+    overflow: hidden;
+    clip-path: inset(0 0 0 0);
+    animation: glitchLetters 6s infinite;
+    pointer-events: none;
+}
+
+/* Letras que desaparecen parcialmente */
+@keyframes glitchLetters {
+    0%,
+    40% {
+        clip-path: inset(0 0 0 0);
+        opacity: 0;
+    }
+
+    60% {
+        clip-path: inset(0 35% 0 0);
+        opacity: 0.7;
+    }
+
+    70% {
+        clip-path: inset(0 0 0 40%);
+        opacity: 0.5;
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+        opacity: 0;
+    }
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 19%;
+      height: 100vh;
+      overflow-y: auto;
+  }
+
+  .content {
+      margin-left: 25%;
+  }
+}
+.navbar-collapse {
+    background-color: #212529;
+    padding: 1rem 1.5rem;
+    border-radius: 0 0 15px 15px;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+}
+@media (max-width: 767px) {
+    .sections {
+        justify-content: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+@media (max-width: 767px) {
+    .Apellido-titles {
+        font-size: 2.6rem;
+        line-height: 1.2;
+        word-break: break-word;
+        white-space: normal;
+        text-align: center;
+    }
+}
+@media (max-width: 767px) {
+    .hero-subtitle {
+        font-size: 1.6rem;
+    }
+
+    .description {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 767px) {
+    .hero-title {
+        font-size: 2.8rem;
+        line-height: 1.2;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .hero-title span {
+        display: block;
+    }
+}
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+@media (max-width: 767px) {
+    .buttons a {
+        background: #1f1f1f;
+        border-radius: 50%;
+        padding: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .buttons a:hover {
+        transform: scale(1.1);
+    }
+}
+.sections {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* 👈 CLAVE */
+}
+@media (max-width: 767px) {
+
+    .hero-icons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .buttons {
+        width: 100%;
+        max-width: 320px;   
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
+@media (max-width: 767px) {
+
+    .buttons img {
+        width: 56px;
+        height: 56px;
+        padding: 8px;
+    }
+}
