@@ -9,23 +9,23 @@ const projects = [
     description:
       "Plataforma de viajes tipo e-commerce desarrollada con Java y MySQL. Permite explorar destinos, gestionar usuarios y simular reservas.",
     tech: [
-      { name: "HTML5", img: "/images/leng/html.png" },
-      { name: "CSS3", img: "/images/leng/css.png" },
-      { name: "JavaScript", img: "/images/leng/javascript.png" },
-      { name: "Java", img: "/images/leng/java.png" },
-      { name: "MySQL", img: "/images/leng/mysql.png" },
-      { name: "GitHub", img: "/images/contact/github.png" }
+      { name: "HTML5", img: "./images/leng/html.png" },
+      { name: "CSS3", img: "./images/leng/css.png" },
+      { name: "JavaScript", img: "./images/leng/javascript.png" },
+      { name: "Java", img: "./images/leng/java.png" },
+      { name: "MySQL", img: "./images/leng/mysql.png" },
+      { name: "GitHub", img: "./images/contact/github.png" }
     ]
   },
   {
     title: "AnimeByText",
-    image: "/images/AnimeByText/animebytext.png",
+    image: "./images/AnimeByText/animebytext.png",
     description:
       "Aplicación web que genera ilustraciones estilo anime a partir de texto utilizando lógica en JavaScript y diseño responsivo.",
     tech: [
-      { name: "HTML5", img: "/images/leng/html.png" },
-      { name: "CSS3", img: "/images/leng/css.png" },
-      { name: "JavaScript", img: "/images/leng/javascript.png" }
+      { name: "HTML5", img: "./images/leng/html.png" },
+      { name: "CSS3", img: "./images/leng/css.png" },
+      { name: "JavaScript", img: "./images/leng/javascript.png" }
     ]
   }
 ];
