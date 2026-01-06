@@ -5,7 +5,7 @@
 const projects = [
   {
     title: "FunOnTrip",
-    image: "/images/FunOnTrip/funontrip.png",
+    image: "./images/FunOnTrip/funontrip.png",
     description:
       "Plataforma de viajes tipo e-commerce desarrollada con Java y MySQL. Permite explorar destinos, gestionar usuarios y simular reservas.",
     tech: [
