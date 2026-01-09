@@ -6,28 +6,55 @@ const projects = [
   {
     title: "FunOnTrip",
     image: "./images/FunOnTrip/funontrip.png",
-    description:
-      "Plataforma de viajes tipo e-commerce desarrollada con Java y MySQL. Permite explorar destinos, gestionar usuarios y simular reservas.",
+    description: "FunOnTrip es un e-commerce de viajes que permite a los usuarios explorar, publicar y gestionar experiencias turísticas de forma sencilla. La plataforma combina funcionalidades de compra y administración de productos con elementos sociales, ofreciendo una experiencia centralizada para planear viajes y descubrir nuevas opciones. Se ajusta a las necesidades del usuario mediante una navegación clara e intuitiva, registro e inicio de sesión para una experiencia personalizada, visualización y administración de productos, diseño responsivo para desktop y dispositivos móviles, y validaciones que reducen errores y mejoran la confianza del usuario. Mis aportes al proyecto incluyen la planificación y definición del alcance bajo metodología Scrum, el diseño de la estructura de navegación y experiencia de usuario, el desarrollo de formularios con validaciones y flujo de autenticación, la implementación de lógica Frontend para listado y creación de productos, y la integración del Frontend con el Backend mediante una API REST.",
+
     tech: [
       { name: "HTML5", img: "./images/leng/html.png" },
       { name: "CSS3", img: "./images/leng/css.png" },
       { name: "JavaScript", img: "./images/leng/javascript.png" },
       { name: "Java", img: "./images/leng/java.png" },
       { name: "MySQL", img: "./images/leng/mysql.png" },
-      { name: "GitHub", img: "./images/contact/github.png" }
+      { name: "GitHub", img: "./images/contact/github.png" },
+      { name: "GitHub", img: "./images/leng/Figma.png" }
     ]
   },
   {
     title: "AnimeByText",
     image: "./images/AnimeByText/animebytext.png",
-    description:
-      "Aplicación web que genera ilustraciones estilo anime a partir de texto utilizando lógica en JavaScript y diseño responsivo.",
+    description: "Esta página web es una plataforma de streaming de anime, diseñada para que los usuarios exploren y descubran contenido de anime de forma visual, intuitiva y atractiva. La aplicación presenta un catálogo organizado por categorías, con tarjetas dinámicas y una navegación fluida que facilita la búsqueda y selección de títulos. Se ajusta a las necesidades del usuario al ofrecer una interfaz llamativa, diseño responsivo para desktop y dispositivos móviles, estructura clara de secciones y una experiencia de usuario enfocada en el consumo de contenido. La planificación del proyecto se realizó siguiendo la misma metodología que el proyecto anterior, definiendo alcances, objetivos y estructura de navegación. Mis aportes incluyen la planificación del Frontend, el diseño de la interfaz y experiencia de usuario, la implementación de componentes visuales inspirados en plataformas de streaming, el desarrollo de la lógica Frontend con JavaScript para la carga y visualización del contenido, y la aplicación de buenas prácticas en estructura y diseño. https://jorfernandofo-byte.github.io/AnymeByText/",
+
     tech: [
       { name: "HTML5", img: "./images/leng/html.png" },
       { name: "CSS3", img: "./images/leng/css.png" },
-      { name: "JavaScript", img: "./images/leng/javascript.png" }
+      { name: "JavaScript", img: "./images/leng/javascript.png" },
+      { name: "Jira", img: "./images/leng/Jira.png" },
     ]
-  }
+  },
+
+  {
+  title: "Cine FerStar",
+  image: "./images/Cine/Cine.png",
+  description: "Esta página web corresponde a un sitio informativo de un cine, desarrollado con un enfoque en Frontend básico y diseño responsivo. La plataforma permite a los usuarios consultar la información principal del cine, como cartelera, horarios y secciones informativas, mediante una interfaz clara, sencilla e intuitiva. Se ajusta a las necesidades del usuario al ofrecer una navegación accesible, correcta adaptación a distintos tamaños de pantalla y una estructura visual ordenada que facilita el acceso a la información. El proyecto se centró en la correcta aplicación de principios de diseño responsivo y buenas prácticas de maquetación. Mis aportes incluyen la estructuración del sitio con HTML, el diseño responsivo con CSS, la organización de secciones para una mejor experiencia de usuario y la implementación de una interfaz funcional y adaptable. https://jorfernandofo-byte.github.io/Cine/",
+  tech: [
+    { name: "HTML5", img: "./images/leng/html.png" },
+    { name: "CSS3", img: "./images/leng/css.png" },
+    { name: "JavaScript", img: "./images/leng/javascript.png" },
+    { name: "GitHub Pages", img: "./images/contact/github.png" },
+  ]
+},
+{
+  title: "Power Sports",
+  image: "./images/Sport/PowerSports.png",
+  description: "Esta página web corresponde a una tienda de deportes desarrollada como un e-commerce básico, que incluye un carrito de compras para la selección y gestión de productos. La plataforma fue diseñada para ofrecer una experiencia clara e intuitiva, con un enfoque en Frontend básico y diseño responsivo para su correcta visualización en distintos dispositivos. Se ajusta a las necesidades del usuario al permitir agregar y quitar productos del carrito, visualizar el resumen de compra y navegar de forma sencilla entre las secciones del sitio. En este proyecto desempeñé el rol de Scrum Master, participando en la planificación, organización del flujo de trabajo y seguimiento de tareas del equipo, además de colaborar en el desarrollo Frontend. Mis aportes incluyen la coordinación del equipo bajo metodología Scrum, la definición de objetivos y entregables, la implementación de la estructura del sitio, el diseño responsivo y el desarrollo del carrito de compras.  https://jorfernandofo-byte.github.io/PowerSports/",
+  tech: [
+    { name: "HTML5", img: "./images/leng/html.png" },
+    { name: "CSS3", img: "./images/leng/css.png" },
+    { name: "JavaScript", img: "./images/leng/javascript.png" },
+    { name: "GitHub Pages", img: "./images/contact/github.png" },
+  ]
+}
+
+
 ];
 
 /* ==============================
