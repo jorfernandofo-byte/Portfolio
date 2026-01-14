@@ -41,7 +41,7 @@ const projects = [
     { name: "HTML5", img: "./images/leng/html.png" },
     { name: "CSS3", img: "./images/leng/css.png" },
     { name: "JavaScript", img: "./images/leng/javascript.png" },
-    { name: "GitHub Pages", img: "./images/contact/github.png" },
+    { name: "GitHub Pages", img: "./images/contact/github.png" }
   ]
 },
 {
@@ -60,103 +60,91 @@ const projects = [
 
 ];
 
-/* ==============================
-   VARIABLES DEL DOM
-================================ */
+document.addEventListener("DOMContentLoaded", () => {
 
-let currentIndex = 0;
+  /* ==============================
+     VARIABLES
+  ================================ */
 
-const projectImage = document.getElementById("projectImage");
-const projectTech = document.getElementById("projectTech");
-const projectLink = document.getElementById("projectLink");
-const projectPage = document.getElementById("projectPage");
+  let currentIndex = 0;
 
+  const projectImage = document.getElementById("projectImage");
+  const projectTech = document.getElementById("projectTech");
+  const projectLink = document.getElementById("projectLink");
+  const projectPage = document.getElementById("projectPage");
 
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
 
-/* ===== MODAL ===== */
-const modal = document.getElementById("projectModal");
-const modalTitle = document.getElementById("modalTitle");
-const modalDescription = document.getElementById("modalDescription");
-const closeModal = document.getElementById("closeModal");
+  const modal = document.getElementById("projectModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDescription = document.getElementById("modalDescription");
+  const closeModal = document.getElementById("closeModal");
 
-/* ==============================
-   FUNCIONES
-================================ */
+  /* ==============================
+     FUNCIONES
+  ================================ */
 
-function renderProject(index) {
-  const project = projects[index];
+  function renderProject(index) {
+    const project = projects[index];
 
-  /* Imagen */
-  projectImage.style.opacity = 0;
-  setTimeout(() => {
-    projectImage.src = project.image;
-    projectImage.style.opacity = 1;
-  }, 150);
+    projectImage.style.opacity = 0;
+    setTimeout(() => {
+      projectImage.src = project.image;
+      projectImage.style.opacity = 1;
+    }, 150);
 
-  /* Tecnologías */
-  projectTech.innerHTML = "";
-  project.tech.forEach(t => {
-    const chip = document.createElement("div");
-    chip.className = "tech-chip";
-    chip.innerHTML = `
-      <img src="${t.img}" alt="${t.name}">
-      <span>${t.name}</span>
-    `;
-    projectTech.appendChild(chip);
+    projectTech.innerHTML = "";
+    project.tech.forEach(t => {
+      const chip = document.createElement("div");
+      chip.className = "tech-chip";
+      chip.innerHTML = `
+        <img src="${t.img}" alt="${t.name}">
+        <span>${t.name}</span>
+      `;
+      projectTech.appendChild(chip);
+    });
+
+    if (project.pageUrl && project.pageUrl !== "#") {
+      projectPage.href = project.pageUrl;
+      projectPage.style.display = "inline-block";
+    } else {
+      projectPage.style.display = "none";
+    }
+  }
+
+  /* ==============================
+     EVENTOS
+  ================================ */
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % projects.length;
+    renderProject(currentIndex);
   });
 
-   if (project.pageUrl && project.pageUrl !== "#") {
-    projectPage.href = project.pageUrl;
-    projectPage.style.display = "inline-block";
-  } else {
-    projectPage.style.display = "none";
-  }
-}
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+    renderProject(currentIndex);
+  });
 
+  projectLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    const project = projects[currentIndex];
+    modalTitle.textContent = project.title;
+    modalDescription.textContent = project.description;
+    modal.classList.add("active");
+  });
 
-/* ==============================
-   EVENTOS CARRUSEL
-================================ */
-
-nextBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % projects.length;
-  renderProject(currentIndex);
-});
-
-prevBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + projects.length) % projects.length;
-  renderProject(currentIndex);
-});
-
-/* ==============================
-   EVENTOS MODAL
-================================ */
-
-projectLink.addEventListener("click", (e) => {
-  e.preventDefault(); // evita redirecciones
-
-  const project = projects[currentIndex];
-  modalTitle.textContent = project.title;
-  modalDescription.textContent = project.description;
-
-  modal.classList.add("active");
-});
-
-closeModal.addEventListener("click", () => {
-  modal.classList.remove("active");
-});
-
-/* Cerrar modal al hacer click fuera */
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) {
+  closeModal.addEventListener("click", () => {
     modal.classList.remove("active");
-  }
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+    }
+  });
+
+  renderProject(currentIndex);
+
 });
-
-/* ==============================
-   INICIALIZACIÓN
-================================ */
-
-renderProject(currentIndex);
