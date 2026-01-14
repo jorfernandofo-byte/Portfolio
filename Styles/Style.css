@@ -47,23 +47,6 @@ body {
   padding: 3rem;
 }
 
-/* MOBILE */
-@media (max-width: 991px) {
-  .sidebar {
-    display: none;
-  }
-
-  .content {
-    margin-left: 0;
-    padding: 0.8rem;
-  }
-}
-
-
-
-
-
-
 .sections{
     padding: 4rem 3rem;
     display: flex;
@@ -71,7 +54,7 @@ body {
 }
 
 .hero-title {
-    font-size: 3.0rem;
+    font-size: 2.5em;
     font-weight: bold;
     color: white;
 }
@@ -83,7 +66,7 @@ body {
 .Apellido-titles {
     color: #39f5e6; 
     margin-left: .5rem;
-    font-size: 3.0rem;
+    font-size: 2.5rem;
 }
 
 .hero-subtitle {
@@ -246,7 +229,7 @@ max-width: 300px;
 /* Tecnologías */
 .tech-list {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
   margin: 1.5rem 0;
@@ -279,25 +262,6 @@ max-width: 300px;
   text-decoration: none;
 }
 
-
-
-@media (max-width: 767px) {
-
-  .carousel-container {
-    gap: 0.5rem;
-  }
-
-  .carousel-frame {
-    max-width: 100%;
-    aspect-ratio: 4 / 3;
-  }
-
-  .carousel-btn {
-    font-size: 3rem;
-    padding: 12px;
-    touch-action: manipulation;
-  }
-}
 .carousel-btn {
   min-width: 48px;
   min-height: 48px;
@@ -454,11 +418,7 @@ max-width: 300px;
     background: rgba(255,255,255,0.25);
 }
 
-@media (max-width: 768px) {
-    .skills-row {
-        justify-content: center;
-    }
-}
+
 .contact-buttons {
     display: flex;
     gap: 16px;
@@ -479,12 +439,7 @@ max-width: 300px;
 .contact-btn.whatsapp { background: #25D366; color: white; }
 .contact-btn.gmail { background: #EA4335; color: white; }
 
-@media (max-width: 768px) {
-    .contact-btn {
-        font-size: 16px;
-        padding: 10px 18px;
-    }
-}
+
 .contact-btn:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 25px rgba(0,0,0,.35);
@@ -503,83 +458,6 @@ max-width: 300px;
     flex-wrap: wrap;
 }
 
-
-
-/* ===== MOBILE CENTER FIX ===== */
-@media (max-width: 767px) {
-
-    /* CENTRAR TEXTO GENERAL */
-    .sections {
-        text-align: center;
-        justify-content: center;
-    }
-
-    /* TITULOS */
-    .hero-title,
-    .hero-subtitle,
-    .hero-text,
-    .Apellido-titles,
-    .description {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* BOTÓN CV */
-    .btn-cv {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* ICONOS SOCIALES */
-    .buttons {
-        justify-content: center;
-    }
-
-    /* PORTFOLIO */
-    .portfolio-section {
-        text-align: center;
-    }
-
-    /* CAJA AMARILLA */
-    .portfolio-info {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* SKILLS */
-    .skills-row {
-        justify-content: center;
-    }
-
-    .skill-card {
-        justify-content: center;
-        text-align: center;
-    }
-
-    /* EDUCACIÓN */
-    .education-item {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
-
-    /* CONTACTO */
-    .contact-buttons {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .tech-used {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 767px) {
-    main {
-        padding-top: 70px;
-    }
-}
 #contacto {
     min-height: auto;
     padding-top: 4rem;
@@ -588,7 +466,7 @@ max-width: 300px;
 .contact-info {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem; /* ESPACIADO ENTRE LÍNEAS */
+    gap: 1.2rem; 
 }
 /* ===== CERTIFICACIONES ===== */
 .certifications {
@@ -692,95 +570,14 @@ max-width: 300px;
     }
 }
 
-
 .navbar-collapse {
     background-color: #212529;
     padding: 1rem 1.5rem;
     border-radius: 0 0 15px 15px;
 }
 
-
-@media (max-width: 767px) {
-    .sections {
-        justify-content: center;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-}
-@media (max-width: 767px) {
-    .Apellido-titles {
-        font-size: 2.6rem;
-        line-height: 1.2;
-        word-break: break-word;
-        white-space: normal;
-        text-align: center;
-    }
-}
-@media (max-width: 767px) {
-    .hero-subtitle {
-        font-size: 1.6rem;
-    }
-
-    .description {
-        font-size: 1.5rem;
-    }
-}
-@media (max-width: 767px) {
-    .hero-title {
-        font-size: 2.8rem;
-        line-height: 1.2;
-        white-space: normal;
-        text-align: center;
-    }
-
-    .hero-title span {
-        display: block;
-    }
-}
-.buttons {
-    display: flex;
-    gap: 1rem;
-}
-@media (max-width: 767px) {
-    .buttons a {
-        background: #1f1f1f;
-        border-radius: 50%;
-        padding: 10px;
-        transition: transform 0.3s ease;
-    }
-
-    .buttons a:hover {
-        transform: scale(1.1);
-    }
-}
-.sections {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap; 
-}
-@media (max-width: 767px) {
-
-    .hero-icons {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .buttons {
-        width: 100%;
-        max-width: 320px;   
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px;  
-    }
-}
-@media (max-width: 767px) {
-
-    .buttons img {
-        width: 56px;
-        height: 56px;
-        padding: 8px;
-    }
-}
+/*a {
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 999999;
+}*/
