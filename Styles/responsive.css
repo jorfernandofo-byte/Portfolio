@@ -196,3 +196,33 @@
         padding: 8px;
     }
 }
+
+@media (max-width: 991.98px) {
+
+  /* Evita capas invisibles bloqueando taps */
+  .sidebar {
+    pointer-events: none;
+  }
+
+  /* Navbar fija no bloquea el contenido */
+  .navbar.fixed-top {
+    pointer-events: auto;
+  }
+
+  /* Asegura carrusel por encima */
+  .portfolio-section {
+    position: relative;
+    z-index: 2;
+  }
+
+  .carousel-container {
+    position: relative;
+    z-index: 3;
+  }
+
+  /* Previene pseudo-elementos bloqueando clicks */
+  .sections::before,
+  .sections::after {
+    pointer-events: none;
+  }
+}
